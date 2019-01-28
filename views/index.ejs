@@ -9,9 +9,11 @@
       <h1> Welcome <%=currentUser.username%>! </h1>
     <% } else { %>
       <h1>Welcome!</h1>
+       <div class="contianer">
+         <a class = "btn btn-primary" href="/sessions/new">LOG IN</a>
+         <a class = "btn btn-success" href="users/new">SIGN UP</a>
+       </div>
 
-    <a class = "btn btn-primary" href="/sessions/new">LOG IN</a>
-    <a class = "btn btn-success" href="users/new">SIGN UP</a>
     <% } %>
 
     <% if(currentUser) { %>

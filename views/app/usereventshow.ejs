@@ -17,9 +17,13 @@
     <h1><%=event.date%></h1>
     <h1><%=event.time%></h1>
     <h1><%=event.description%></h1>
-    <a href="<%=event.findOutMore%>">find out more</a>
+    <a href="<%=event.findOutMore%>">
+      <button class="btn btn-info" type="button" name="button">Find Out More</button>
+    </a>
     <div class="edit">
-      <a href="/pghfree/userevents/<%=event.id%>/edit">edit</a>
+      <a href="/pghfree/userevents/<%=event.id%>/edit">
+        <button type="button" class="btn btn-secondary" name="button">Edit this event</button>
+      </a>
       <div class="delete">
        <form class="" action="/pghfree/userevents/<%=event.id%>?_method=DELETE" method="POST">
 

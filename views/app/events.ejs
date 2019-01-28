@@ -14,10 +14,10 @@
       <div class="container">
         <% for (let i = 0; i < events.length; i++) {%>
           <div class="event">
-            <h2><%=events[i].title%></h2>
+            <a href="/pghfree/events/<%=events[i].id%>"><h2><%=events[i].title%></h2></a>
             <h3><%=events[i].dateAndTime%></h3>
             <h4><%=events[i].location%></h4>
-            <a href="/pghfree/events/<%=events[i].id%>"><img class="img-fluid" src="<%=events[i].eventPhoto%>" alt=""></a></br>
+            <img class="img-fluid" src="<%=events[i].eventPhoto%>" alt=""></br>
        <% }%>
       </div>
 
