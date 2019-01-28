@@ -10,6 +10,7 @@ const appController = require('./controllers/app_controller.js')
 const methodOverride = require('method-override');
 const PORT = process.env.PORT
 const mongoURI = process.env.MONGODB_URI
+const db = mongoose.connection;
 
 
 app.use(session({
@@ -41,7 +42,7 @@ app.get('/', (req, res)=>{
 
 //connections
 mongoose.connect(mongoURI, { useNewUrlParser: true })
-mongoose.connection.once('open', () => {
+db.on('open', () => {
   console.log('connected to mongo')
 })
 
