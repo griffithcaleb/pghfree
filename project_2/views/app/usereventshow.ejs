@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="event">
+    <img src="<%=event.eventPhoto%>" alt="">
+    <h1><%=event.title%></h1>
+    <h1><%=event.date%></h1>
+    <h1><%=event.time%></h1>
+    <a href="<%=event.findOutMore%>">find out more</a>
+    </div>
+      <div class="edit">
+        <a href="/pghfree/userevents/<%=event.id%>/edit">edit</a>
+      </div>
+
+
+     <div class="delete">
+      <form class="" action="/pghfree/userevents/<%=event.id%>?_method=DELETE" method="POST">
+
+        <button type="input" name="button">Delete</button>
+
+      </form>
+     </div>
+  </body>
+</html>

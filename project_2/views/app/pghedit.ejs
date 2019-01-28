@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Edit Event Page</h1>
+        <form action="/pghfree/usersevents/<%=event.id%>?_method=PUT" method="POST">
+    		Title: <input type="text" name="title" value="<%=event.title%>"/>
+    		Date: <input type="date" name="date" value="<%=event.date%>"/>
+        Time: <input type="time" name="time" value="<%=event.time%>">
+        Location: <input type="text" name="location" value="<%=event.location%>"/>
+        Description: <input type="text" name="description" value="<%=event.description%>"/>
+        EventPhoto: <input type="text" name="eventPhoto" value="<%=event.location%>"/>
+
+
+
+          <button type="submit" name="button">make changes</button>
+        </form>
+
+
+        <div class="delete">
+          <form class="" action="/pghfree/<%=event.id%>?_method=DELETE" method="POST">
+
+          <button type="input" name="button">Delete</button>
+
+          </form>
+
+        </div>
+    </body>
+</html>

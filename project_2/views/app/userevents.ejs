@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>user events</h1>
+    <a href="/pghfree/userevents/new">create new</a>
+    <div class="events-container">
+      <% for (let i = 0; i < events.length; i++) {%>
+        <div class="event">
+          <a href="/pghfree/userevents/<%=events[i].id%>">showyy route</a>
+          <h2><%=events[i].title%></h2>
+             <% let date = events[i].date%>
+          <h3><%=date%></h3>
+
+
+          <h4><%=events[i].location%></h4>
+          <h4><%=events[i].description%></h4>
+          <a href="<%=events[i].findOutMore%>">find out more</a>
+          <img src="<%=events[i].eventPhoto%>" alt="">
+        </div>
+     <% }%>
+    </div>
+  </body>
+</html>

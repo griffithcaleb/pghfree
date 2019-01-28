@@ -1,0 +1,12 @@
+<div class="events-container">
+  <% for (let i = 0; i < events.length; i++) {%>
+    <div class="event">
+      <a href="/pghfree/events/<%=events[i].id%>">show route</a>
+      <h2><%=events[i].title%></h2>
+      <h3><%=events[i].dateAndTime%></h3>
+      <h4><%=events[i].location%></h4>
+      <a href="<%=events[i].findOutMore%>">find out more</a>
+      <img src="<%=events[i].eventPhoto%>" alt="">
+    </div>
+ <% }%>
+</div>
