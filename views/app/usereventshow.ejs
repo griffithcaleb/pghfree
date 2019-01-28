@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-
-
-    <meta charset="utf-8">
-    <title></title>
+    <% include ../partials/head.ejs %>
   </head>
   <body>
-    <div class="event">
+
+    <header>
+       <% include ../partials/header.ejs %>
+    </header>
+    <nav>
+        <% include ../partials/nav.ejs %>
+    </nav>
+    <div class="container">
     <img src="<%=event.eventPhoto%>" alt="">
     <h1><%=event.title%></h1>
     <h1><%=event.date%></h1>
     <h1><%=event.time%></h1>
+    <h1><%=event.description%></h1>
     <a href="<%=event.findOutMore%>">find out more</a>
+    <div class="edit">
+      <a href="/pghfree/userevents/<%=event.id%>/edit">edit</a>
+      <div class="delete">
+       <form class="" action="/pghfree/userevents/<%=event.id%>?_method=DELETE" method="POST">
+
+         <button class="btn btn-danger" type="input" name="button">Delete</button>
+
+       </form>
     </div>
-      <div class="edit">
-        <a href="/pghfree/userevents/<%=event.id%>/edit">edit</a>
-      </div>
+    </div>
 
 
-     <div class="delete">
-      <form class="" action="/pghfree/userevents/<%=event.id%>?_method=DELETE" method="POST">
 
-        <button type="input" name="button">Delete</button>
 
-      </form>
      </div>
   </body>
 </html>

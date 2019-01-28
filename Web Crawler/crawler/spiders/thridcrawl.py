@@ -13,4 +13,4 @@ class ThirdSpider(scrapy.Spider):
     def parse(self, response):
         for row in response.xpath('//*[@class="table table-striped"]//tbody//tr'):
             yield {
-                'first' :row.xpath('td//text()[1]').extract()}
+                'data' :row.xpath('td//text()[1]').extract()}

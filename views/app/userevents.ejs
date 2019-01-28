@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <% include ../partials/head.ejs %>
   </head>
   <body>
+    <header>
+       <% include ../partials/header.ejs %>
+    </header>
+    <nav>
+        <% include ../partials/nav.ejs %>
+    </nav>
+
     <h1>user events</h1>
-    <a href="/pghfree/userevents/new">create new</a>
+    <a href="/pghfree/userevents/new"><button type="button" class="btn btn-success" name="button">Add Your Event</button></a>
     <div class="events-container">
       <% for (let i = 0; i < events.length; i++) {%>
         <div class="event">
-          <a href="/pghfree/userevents/<%=events[i].id%>">showyy route</a>
-          <h2><%=events[i].title%></h2>
-             <% let date = events[i].date%>
-          <h3><%=date%></h3>
+
+            <a href="/pghfree/userevents/<%=events[i].id%>"><h2><%=events[i].title%></h2></a>
+          <h3><%=events[i].date%></h3>
+          <h3><%=events[i].time%></h3>
+          <h3><%=events[i].location%></h>
+
+          <img  class="img-fluid" src="<%=events[i].eventPhoto%>" alt="">
+            <h4><%=events[i].description%></h4>
 
 
-          <h4><%=events[i].location%></h4>
-          <h4><%=events[i].description%></h4>
-          <a href="<%=events[i].findOutMore%>">find out more</a>
-          <img src="<%=events[i].eventPhoto%>" alt="">
+
+
+
+          <a href="http://www.<%=events[i].findOutMore%>">find out more</a>
+
         </div>
      <% }%>
     </div>

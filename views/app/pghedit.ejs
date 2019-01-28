@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title></title>
+      <% include ../partials/head.ejs %>
     </head>
     <body>
+        <header>
+           <% include ../partials/header.ejs %>
+        </header>
+        <nav>
+            <% include ../partials/nav.ejs %>
+        </nav>
         <h1>Edit Event Page</h1>
         <form action="/pghfree/usersevents/<%=event.id%>?_method=PUT" method="POST">
-    		Title: <input type="text" name="title" value="<%=event.title%>"/>
-    		Date: <input type="date" name="date" value="<%=event.date%>"/>
-        Time: <input type="time" name="time" value="<%=event.time%>">
-        Location: <input type="text" name="location" value="<%=event.location%>"/>
-        Description: <input type="text" name="description" value="<%=event.description%>"/>
-        EventPhoto: <input type="text" name="eventPhoto" value="<%=event.location%>"/>
+          <div class="contianer">
 
 
+          <form action="/pghfree/userevents/new" method="POST">
+            <div class="form-group">
+              <label for="title">Event Title or Name</label>
+              <input class="form-control" type="text" name="title" value ="<%=event.title%>"/>
+            </div>
+            <div class="form-group">
+              <label for="date">Date<label>
+              <input  class="form-control" type="date" name="date" value ="<%=event.date%>" />
+            </div>
+              <div class="form-group">
+                <label for="time">Time</label>
+                <input  class="form-control" type="time" name="time" value ="<%=event.time%>" />
+              </div>
+              <div class="form-group">
+                <label for="description">Event Description</label>
+                <textarea class="form-control" type="text" name="description" rows="8" cols="80" value ="<%=event.description%>"/>
+                </textarea>
+              </div>
+              <div class="form-group">
+                <label for="findOutMore">link to event on another site</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">https://www.</span>
+                  </div>
+                  <input type="text" name = 'findOutMore' class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+              </div>
+              <div class="form-group">
+              <label for="eventPhoto">link to image for event</label>
+              <input  class="form-control"type="file" accept="image/*" name="eventPhoto" value ="<%=event.eventPhoto%>"//>
+              </div>
 
-          <button type="submit" name="button">make changes</button>
-        </form>
+
+                  <button class ="btn btn-primary" type="submit" name="button">make changes</button>
+  
 
 
-        <div class="delete">
-          <form class="" action="/pghfree/<%=event.id%>?_method=DELETE" method="POST">
-
-          <button type="input" name="button">Delete</button>
-
+            </div>
           </form>
+      </body>
+  </html>
+
+
+
+
+
+
+
+
 
         </div>
     </body>

@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title></title>
+      <% include ../partials/head.ejs %>
     </head>
     <body>
         <h1>Create User</h1>
         <form action="/users" method="POST">
             <input type="text" name="username" placeholder="username"/>
             <input type="password" name="password" />
-            <input type="submit" value="Create User" />
+            <button  class="btn btn-outline-success" type="submit" name="button">Create New User</button>
         </form>
     </body>
 </html>

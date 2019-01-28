@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
- <meta charset="utf-8">
-    <title></title>
+    <% include ../partials/head.ejs %>
   </head>
   <body>
-    <div class="event">
+      <header>
+         <% include ../partials/header.ejs %>
+      </header>
+      <nav>
+          <% include ../partials/nav.ejs %>
+      </nav>
+    <div class="container">
     <img src="<%=event.eventPhoto%>" alt="">
     <h1><%=event.title%></h1>
     <h1><%=event.dateAndTime%></h1>
     <h1><%=event.location%></h1>
-    <a href="<%=event.findOutMore%>">find out more</a>
-    
+    <h1><%=event.description%></h1>
+    <a href="<%=event.findOutMore%>"> <button type="button" class="btn btn-info" name="button">Find out More</button></a>
+
     </div>
 
     </div>

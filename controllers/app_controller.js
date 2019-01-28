@@ -88,7 +88,7 @@ if(req.session.currentUser){
   console.log(req.body.date);
   UserEvent.create(req.body,(err,createdEvent) => {
 
-
+    console.log(createdEvent);
 
     res.redirect('/pghfree/userevents')
   })
