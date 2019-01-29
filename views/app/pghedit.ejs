@@ -33,6 +33,10 @@
           <input class="form-control" type="time" name="time" value="<%=event.time%>" />
         </div>
         <div class="form-group">
+          <label for="time">Location:</label>
+          <input class="form-control" type="text" name="location" value="<%=event.location%>" />
+        </div>
+        <div class="form-group">
           <label for="description">Event Description:</label>
           <textarea class="form-control" type="text" name="description" rows="8" cols="80" value="<%=event.description%>" />
           </textarea>
@@ -54,19 +58,7 @@
         </div>
         </div>
       </form>
-</body>
-
-</html>
-
-
-
-
-
-
-
-
-
-</div>
+        <footer> <% include ../partials/footer.ejs %></footer>
 </body>
 
 </html>

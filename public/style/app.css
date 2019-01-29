@@ -143,3 +143,26 @@ textarea {
 .findOutMore{
   margin-top: 5%;
 }
+.userEvent{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+footer{
+  background-color: #336699;
+  padding: 25px;
+  border-top: 2px solid #55D8DD;
+}
+
+.buttonsContent{
+  text-align: center;
+  padding: 20px;
+}
+.findOutMore{
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+.edit{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}

@@ -105,7 +105,8 @@ router.get('/userevents/:id', (req, res)=>{
   if(req.session.currentUser){
     UserEvent.findById(req.params.id, (err, foundEvent)=>{
         res.render('./app/usereventshow.ejs',{
-          event:foundEvent
+          event:foundEvent,
+          apiKey:process.env.GOOGLEMAPAPI
         });
     });
   } else {res.redirect('/sessions/new')}

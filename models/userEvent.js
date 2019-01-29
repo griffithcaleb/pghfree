@@ -5,6 +5,7 @@ const userEventSchema = new Schema({
   title: String,
   date: String,
   time: String,
+  location: String,
   description: String,
   findOutMore:String,
   eventPhoto: String,

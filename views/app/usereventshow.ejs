@@ -12,24 +12,47 @@
         <% include ../partials/nav.ejs %>
     </nav>
     <div class="container">
-    <img src="<%=event.eventPhoto%>" alt="">
-    <h1><%=event.title%></h1>
-    <h1><%=event.date%></h1>
-    <h1><%=event.time%></h1>
-    <h1><%=event.description%></h1>
-    <a href="<%=event.findOutMore%>">
-      <button class="btn btn-info" type="button" name="button">Find Out More</button>
-    </a>
-    <div class="edit">
-      <a href="/pghfree/userevents/<%=event.id%>/edit">
-        <button type="button" class="btn btn-secondary" name="button">Edit this event</button>
-      </a>
-      <div class="delete">
-       <form class="" action="/pghfree/userevents/<%=event.id%>?_method=DELETE" method="POST">
+     <div class="userEvent">
+       <div class="userEvenContent">
+         <img src="<%=event.eventPhoto%>" alt="">
+         <h1><%=event.title%></h1>
+         <h1><%=event.date%></h1>
+         <h1><%=event.time%></h1>
+         <h1><%=event.description%></h1>
+     <div class="iframe">
+       <iframe
+       width="600"
+       height="450"
+       frameborder="0" style="border:0"
+       src="https://www.google.com/maps/embed/v1/place?key=<%=apiKey%>
+         &q=<%=event.location%>,Pittsburgh,PA" allowfullscreen>
+       </iframe>
+     </div>
+       </div>
+     </div>
+     <div class="buttons">
+       <div class="buttonsContent">
+         <div class="findOutMore">
+           <a href="<%=event.findOutMore%>">
+             <button class="btn btn-info" type="button" name="button">Find Out More</button>
+           </a>
+         </div>
 
-         <button class="btn btn-danger" type="input" name="button">Delete</button>
+         <div class="edit">
+           <a href="/pghfree/userevents/<%=event.id%>/edit">
+             <button type="button" class="btn btn-secondary" name="button">Edit this event</button>
+           </a>
+         </div>
+           <div class="delete">
+            <form class="" action="/pghfree/userevents/<%=event.id%>?_method=DELETE" method="POST">
 
-       </form>
+              <button class="btn btn-danger" type="input" name="button">Delete</button>
+
+            </form>
+       </div>
+
+     </div>
+
     </div>
     </div>
 
@@ -37,5 +60,6 @@
 
 
      </div>
+       <footer> <% include ../partials/footer.ejs %></footer>
   </body>
 </html>
