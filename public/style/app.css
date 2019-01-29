@@ -1,3 +1,81 @@
-*{
+/* *{
   border: 1px solid red;
+} */
+
+.firstScreen{
+  width: 30%;
+  margin: 5% auto;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.logo{
+  display: block;
+  margin: 0 auto;
+}
+a{
+  margin: 5px 5px 5px 5px;
+}
+
+.createUser{
+  width:75%;
+margin: 0 auto;}
+
+.createUserContent{
+  width: 50%;
+  margin: 5% auto;
+
+}
+.createButton{
+  display: block;
+  margin: 0 auto;
+}
+.signIn{
+  width: 80%;
+  margin: 5% auto;
+}
+.singInContent{
+  width: 50%;
+  margin: 0 auto;
+}
+.navBar{
+  background-color: #55D8DD;
+  display: flex;
+  flex-direction: row;
+
+}
+.navBarContentFirst{
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+.navBarContentEnd{
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+  padding: 5px;
+}
+.event{
+  width: 90%;
+  margin: 2% auto;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+.event:hover{
+   box-shadow: 2px 2px #888888
+}
+.eventImage{
+  width:29%;
+  display: inline-block;
+}
+.eventContent{
+  width: 69%;
+  display: inline-block;
+  text-align: right;
+
 }

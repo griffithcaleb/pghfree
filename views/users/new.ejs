@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <% include ../partials/head.ejs %>
-    </head>
-    <body>
-        <h1>Create User</h1>
-        <form action="/users" method="POST">
-            <input type="text" name="username" placeholder="username"/>
-            <input type="password" name="password" />
-            <button  class="btn btn-outline-success" type="submit" name="button">Create New User</button>
-        </form>
-    </body>
+
+<head>
+  <% include ../partials/head.ejs %>
+</head>
+
+<body>
+  <div class="createUser">
+    <div class="createUserContent">
+      <a href="/"><img class = 'logo' src="/images/logo.png" alt=""></a>
+      <form action="/users" method="POST">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">PGHFREE</span>
+          </div>
+          <input type="text" name='username' class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">PGHFREE</span>
+          </div>
+          <input type="password" name= 'password' class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <button class="btn btn-outline-success createButton" type="submit" name="button">Create New User</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+
 </html>
