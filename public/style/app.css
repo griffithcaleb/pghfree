@@ -117,3 +117,29 @@ margin: 0 auto;}
 textarea {
     resize: none;
 }
+
+.eventContainer{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+.eventShowImage{
+  width:50%;
+  margin: 0 auto;
+}
+.eventShowImage>img{
+  width: 100%;
+  display: inline-block;
+}
+.eventShowContent{
+  width: 70%;
+  display: inline-block;
+}
+.iframe{
+  width: 80%;
+  margin: 0 auto;
+}
+.findOutMore{
+  margin-top: 5%;
+}

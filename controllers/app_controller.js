@@ -4,7 +4,7 @@ const User = require('../models/users.js');
 const Event = require('../models/events.js')
 const UserEvent = require ('../models/userEvent.js')
 const data = require('../models/seedData.js')
-const moment = require('moment')
+
 //logout button
 router.delete('/', (req, res) => {
     req.session.destroy(()=>{
@@ -57,7 +57,8 @@ router.get('/events/:id', (req, res)=>{
   if(req.session.currentUser){
     Event.findById(req.params.id, (err, foundEvent)=>{
         res.render('./app/pgheventshow.ejs',{
-          event:foundEvent
+          event:foundEvent,
+          apiKey:process.env.GOOGLEMAPAPI
         });
     });
   } else {res.redirect('/sessions/new')}

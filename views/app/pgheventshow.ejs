@@ -11,17 +11,34 @@
           <% include ../partials/nav.ejs %>
       </nav>
     <div class="container eventContainer">
-    <img src="<%=event.eventPhoto%>" alt="">
-    <h1><%=event.title%></h1>
-    <h1><%=event.dateAndTime%></h1>
-    <h1><%=event.location%></h1>
-    <h1><%=event.description%></h1>
-    <a href="<%=event.findOutMore%>">
-        <button type="button" class="btn btn-info" name="button">Find Out More</button>
-    </a>
 
-    </div>
+      <div class="eventShowContent">
+        <h1><%=event.title%></h1>
+        <div class="eventShowImage">
+          <img src="<%=event.eventPhoto%>" alt="">
+      </div>
+        <h1><%=event.dateAndTime%></h1>
+        <h1><%=event.location%></h1>
+        <h1><%=event.description%></h1>
+      </div>
+      <div class="iframe">
+        <iframe
+      width="600"
+      height="450"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=<%=apiKey%>
+        &q=<%=event.location%>,Pittsburgh,PA" allowfullscreen>
+      </iframe>
+      <div class="findOutMore">
+        <a href="<%=event.findOutMore%>">
+            <button type="button" class="btn btn-info" name="button">Find Out More</button>
+        </a>
 
-    </div>
+      </div>
+
+        </div>
+
+      </div>
+
   </body>
 </html>
