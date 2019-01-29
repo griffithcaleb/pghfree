@@ -43,6 +43,11 @@ margin: 0 auto;}
   background-color: #55D8DD;
   display: flex;
   flex-direction: row;
+  padding: 15px;
+  width: 100%;
+  margin-bottom: 3%;
+  border-top: 2px solid #3C5975;
+  border-bottom:  2px solid #3C5975;
 
 }
 .navBarContentFirst{
@@ -72,10 +77,43 @@ margin: 0 auto;}
 .eventImage{
   width:29%;
   display: inline-block;
+  padding: 10px;
 }
 .eventContent{
   width: 69%;
   display: inline-block;
   text-align: right;
+  padding: 10px;
 
+}
+.changepage{
+  width: 100%;
+  margin: 0 auto;
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+}
+.userEventContent{
+  width: 100%;
+  display: inline-block;
+  text-align: left;
+  padding: 10px;
+
+}
+.makeNewEvent{
+  width: 80%;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+}
+.editEvent{
+  width: 80%;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+}
+
+textarea {
+    resize: none;
 }

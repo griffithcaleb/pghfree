@@ -1,33 +1,59 @@
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <% include ../partials/head.ejs %>
   </head>
   <body>
-    <header>
-       <% include ../partials/header.ejs %>
-    </header>
-    <nav>
-        <% include ../partials/nav.ejs %>
-    </nav>
+   <header>
+    <% include ../partials/header.ejs %>
+   </header
+   <nav>
+       <% include ../partials/nav.ejs %>
 
-    <h1>user events</h1>
-    <a href="/pghfree/userevents/new"><button type="button" class="btn btn-success" name="button">Add Your Event</button></a>
-    <div class="events-container">
-      <% for (let i = 0; i < events.length; i++) {%>
-        <div class="event">
+   </nav>
+   <div class="container">
+     <a href="/pghfree/userevents/new"><button type="button" class="btn btn-success" name="button">Add Your Event</button></a>
 
+     <div class="changepage">
+       <ul class="pagination">
+         <li class="page-item" id = 'previous-page'><a class="page-link" href="#">Previous</a></li>
+       </ul>
+     </div>
+
+
+
+   <div id='eventContainer' class="container">
+
+        <% for (let i = 1; i < events.length; i++) {%>
+            <div class="event">
+            <div class="userEventContent">
             <a href="/pghfree/userevents/<%=events[i].id%>"><h2><%=events[i].title%></h2></a>
-          <h3><%=events[i].date%></h3>
-          <h3><%=events[i].time%></h3>
-          <h3><%=events[i].location%></h>
 
-          <img  class="img-fluid" src="<%=events[i].eventPhoto%>" alt="">
-            <h4><%=events[i].description%></h4>
+            <h3><%=events[i].date%></h3>
+            <h3><%=events[i].time%></h3>
+
+            <h4><%=events[i].location%></h4>
+            <h3><%=events[i].description%></h3>
 
 
-        </div>
-     <% }%>
+            </div>
+          </div>
+
+
+       <% }%>
+       <div class="container changepage">
+         <ul class="pagination">
+           <li class="page-item" id = 'previous-page'><a class="page-link" href="#">Previous</a></li>
+         </ul>
+       </div>
+
+
     </div>
+</div>
   </body>
 </html>

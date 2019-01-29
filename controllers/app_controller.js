@@ -43,6 +43,7 @@ find({
 }).
 sort({ date: 1 }).
 exec((err,foundEvents) => {
+  console.log(foundEvents);
    res.render('./app/userevents.ejs',{
      events:foundEvents,
 
