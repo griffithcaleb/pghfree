@@ -17,7 +17,7 @@
   <form action="/pghfree/usersevents/<%=event.id%>?_method=PUT" method="POST">
     <div class="container">
         <div class="editEvent">
-           <h1>Edit Event Page</h1>
+           <h1><%=event.title%></h1>
 
       <form action="/pghfree/userevents/new" method="POST">
         <div class="form-group">
@@ -52,7 +52,7 @@
         </div>
         <div class="form-group">
           <label for="eventPhoto">link to image for event:</label>
-          <input class="form-control" type="file" accept="image/*" name="eventPhoto" value="<%=event.eventPhoto%>"//> </div> <button class="btn btn-primary" type="submit" name="button">make changes</button>
+          <input class="form-control" type="text" name="eventPhoto" value="<%=event.eventPhoto%>"//> </div> <button class="btn btn-primary" type="submit" name="button">make changes</button>
 
 
         </div>

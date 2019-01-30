@@ -31,14 +31,18 @@
 
         <% for (let i = 1; i < events.length; i++) {%>
             <div class="event">
-            <div class="userEventContent">
-            <a href="/pghfree/userevents/<%=events[i].id%>"><h2><%=events[i].title%></h2></a>
 
-            <h3><%=events[i].date%></h3>
-            <h3><%=events[i].time%></h3>
+              <div class="userEventPhoto">
+                <img src="<%=events[i].eventPhoto%>" alt="">
+              </div>
+              <div class="userEventContent">
+            <a href="/pghfree/userevents/<%=events[i].id%>"><h3><%=events[i].title%></h3></a>
 
-            <h4><%=events[i].location%></h4>
-            <h3><%=events[i].description%></h3>
+            <h4><%=events[i].date%></h4>
+            <h6><%=events[i].time%></h6>
+
+            <h6><%=events[i].location%></h6>
+
 
 
             </div>

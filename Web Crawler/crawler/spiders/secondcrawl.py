@@ -12,11 +12,11 @@ class PghCulturalTrustSpider(scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
-    	for quote in response.css('.events-group'):
+    	for data in response.css('.events-group'):
             yield {
-                'title': quote.css('.title a::text').extract_first(),
-				'time': quote.css('.time-wrapper .range::text').extract_first(),
-                'location': quote.css('.venue::text').extract_first(),
-                'findOutMore': quote.css('.title a::attr(href)').extract(),
-                'eventPhoto': quote.css('.lead-image').xpath('@src').extract(),
+                'title': data.css('.title a::text').extract_first(),
+				'time': data.css('.time-wrapper .range::text').extract_first(),
+                'location': data.css('.venue::text').extract_first(),
+                'findOutMore': data.css('.title a::attr(href)').extract(),
+                'eventPhoto': data.css('.lead-image').xpath('@src').extract(),
               }
