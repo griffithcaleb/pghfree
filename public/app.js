@@ -1,3 +1,6 @@
+//pagination tutorial found on youTube https://www.youtube.com/watch?v=Xznn-ggD0GU credit goes to David Acosta
+
+
 $(() => {
   let numberOfItems = $('#eventContainer .event').length
   let limitPerPage = 10;
@@ -59,9 +62,9 @@ $(() => {
 
   }
 })
-//previous button
+//previous button needs work
   $('#previous-page').on('click',() => {
-      alert('yo fix this')
+    
   })
 
 
