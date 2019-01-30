@@ -6,13 +6,15 @@
   <body>
 
     <% if(currentUser) { %>
-      <h1> Welcome <%=currentUser.username%>! </h1>
+
     <% } else { %>
       <div class="contianer">
         <div class="firstScreen">
+              <div class="imageContainer">
+                  <img class = 'firstscreenlogo img-fluid' src="/images/logo.png" alt="">
+              </div>
 
 
-      <img class = 'logo' src="/images/logo.png" alt="">
 
       <ul class="nav justify-content-center">
         <li class="nav-item">
@@ -26,16 +28,22 @@
     <% } %>
 
     <% if(currentUser) { %>
-    <main>
-           <a href="/pghfree">Continue to PghFree</a>
-    </main>
-  <% } %>
+      <div class="container">
+          <div class="alreadyLoggedIn">
+              <h1> Welcome <%=currentUser.username%>! </h1>
+            <a href="/pghfree"><button class = 'btn btn-primary buttonFix'>Continue to PGHFREE</button></a>
 
-    <% if(currentUser) { %>
+   <% } %>
 
-        <form action="/sessions?_method=DELETE" method="POST">
-            <input type="submit" value="Logout"/>
-        </form>
-<% } %>
+     <% if(currentUser) { %>
+
+         <form action="/sessions?_method=DELETE" method="POST">
+             <button type="submit" class = 'btn btn-danger'>Logout</button>
+         </form>
+ <% } %>
+          </div>
+      </div>
+
   </body>
+
 </html>
