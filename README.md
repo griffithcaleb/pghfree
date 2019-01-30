@@ -1,7 +1,7 @@
 # FREEPGH
 
-#### Overall Goals for the Project
-FREEPGH was created with the intention of brining the musical community in Pittsburgh closer together. The app will be a place where users can post events as well as view a list of events researched by FREEPGH.
+#### Overall Goal
+FREEPGH was created with the intention of bringing the musical community in Pittsburgh closer together. The app will be a place where users can post events as well as view a list of events researched by FREEPGH.
 
 #### Technologies Used
 Languages:
@@ -37,7 +37,7 @@ I envision a future version of this project with the following functionality:
 2. Web crawler automation with updates
 3. Individual user login
 
-###Sources
+### Sources
 1. David Acosta - [Pagination tutorial](https://www.youtube.com/watch?v=Xznn-ggD0GU)  
 2. [Scrapy Web Crawler Tutorial](https://doc.scrapy.org/en/latest/intro/tutorial.html)
 
