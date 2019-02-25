@@ -339,3 +339,7 @@ label{
   margin-left: 0 auto;
 
 }
+.preview > ul {
+  {
+list-style-type: none;
+}
