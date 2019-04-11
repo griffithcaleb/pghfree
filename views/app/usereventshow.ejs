@@ -1,67 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <% include ../partials/head.ejs %>
-  </head>
-  <body>
 
-    <header>
-       <% include ../partials/header.ejs %>
-    </header>
-    <nav>
-        <% include ../partials/nav.ejs %>
-    </nav>
-    <div class="container">
-     <div class="userEvent">
-       <div class="userEvenContent">
-         <h1><%=event.title%></h1>
-         <img class ='usershowimage' src="<%=event.eventPhoto%>"" alt="">
+<head>
+  <% include ../partials/head.ejs %>
+</head>
+<body>
+  <header>
+    <% include ../partials/header.ejs %>
+  </header>
+  <nav>
+    <% include ../partials/nav.ejs %>
+  </nav>
+  <div class="container">
+    <div class="userEvent">
+      <div class="userEvenContent">
+        <h1>
+          <%=event.title%>
+        </h1>
+        <img class='usershowimage' src="<%=event.eventPhoto%>"" alt="">
 
          <h3><%=event.date%></h3>
          <h6><%=event.time%></h6>
          <p><%=event.description%></p>
-     <div class="iframe">
-       <iframe
-       width="100%"
-       height="500"
-       frameborder="0" style="border:0"
-       src="https://www.google.com/maps/embed/v1/place?key=<%=apiKey%>
+         <div class=" iframe">
+        <iframe width="100%" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%=apiKey%>
          &q=<%=event.location%>,Pittsburgh,PA" allowfullscreen>
-       </iframe>
-     </div>
-     <div class="buttons">
-       <div class="buttonsContent">
-         <div class="findOutMore">
-           <a href="<%=event.findOutMore%>">
-             <button class="btn btn-info" type="button" name="button">Find Out More</button>
-           </a>
-         </div>
+        </iframe>
+      </div>
+      <div class="buttons">
+        <div class="buttonsContent">
+          <div class="findOutMore">
+            <a href="<%=event.findOutMore%>">
+              <button class="btn btn-info" type="button" name="button">Find Out More</button>
+            </a>
+          </div>
 
-         <div class="edit">
-           <a href="/pghfree/userevents/<%=event.id%>/edit">
-             <button type="button" class="btn btn-secondary" name="button">Edit this event</button>
-           </a>
-         </div>
-           <div class="delete">
+          <div class="edit">
+            <a href="/pghfree/userevents/<%=event.id%>/edit">
+              <button type="button" class="btn btn-secondary" name="button">Edit this event</button>
+            </a>
+          </div>
+          <div class="delete">
             <form class="" action="/pghfree/userevents/<%=event.id%>?_method=DELETE" method="POST">
-
               <button class="btn btn-danger" type="input" name="button">Delete</button>
-
             </form>
-       </div>
-
-     </div>
-
+          </div>
+        </div>
+      </div>
     </div>
-       </div>
-     </div>
+  </div>
 
-    </div>
+  </div>
+</div>
+  <footer>
+    <% include ../partials/footer.ejs %>
+  </footer>
+</body>
 
-
-
-
-     </div>
-       <footer> <% include ../partials/footer.ejs %></footer>
-  </body>
 </html>

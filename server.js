@@ -36,13 +36,6 @@ app.get('/', (req, res)=>{
     });
 });
 
-
-
-
-
-
-
-
 //connections
 mongoose.connect(mongoURI, { useNewUrlParser: true })
 db.on('open', () => {

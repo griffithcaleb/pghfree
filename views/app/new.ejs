@@ -16,7 +16,7 @@
   <div class="container">
     <div class="makeNewEvent">
       <div class="makeNewEventContent">
-            <h1>Add your event!</h1>
+        <h1>Add your event!</h1>
         <form action="/pghfree/userevents/new" method="POST">
           <div class="form-group">
             <label for="title">Event Name:</label>
@@ -24,7 +24,7 @@
           </div>
           <div class="form-group">
             <label for="date">Date:</label>
-              <input class="form-control dateFix" type="date" name="date" />
+            <input class="form-control dateFix" type="date" name="date" />
           </div>
           <div class="form-group">
             <label for="time">Time:</label>
@@ -32,7 +32,7 @@
           </div>
           <div class="form-group">
             <label for="time">Location:</label>
-            <input class="form-control location" type="text" name="location" placeholder='leave off city or zip!'/>
+            <input class="form-control location" type="text" name="location" placeholder='leave off city or zip!' />
           </div>
           <div class="form-group">
             <label for="description">Event description:</label>
@@ -51,15 +51,15 @@
 
           <div class="form-group">
             <label for="eventPhoto">Image link:</label>
-            <input class="form-control" type="text" name="eventPhoto" placeholder='link address'/>
-                    </div>
-                    <button class=" btn btn-outline-success" type="submit" name="button">Add event!</button>
+            <input class="form-control" type="text" name="eventPhoto" placeholder='link address' />
           </div>
-
-        </form>
+          <button class=" btn btn-outline-success" type="submit" name="button">Add event!</button>
       </div>
 
+      </form>
     </div>
+
+  </div>
   </div>
   <footer>
     <% include ../partials/footer.ejs %>

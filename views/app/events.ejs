@@ -1,52 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <% include ../partials/head.ejs %>
-  </head>
-  <body>
-   <header>
+
+<head>
+  <% include ../partials/head.ejs %>
+</head>
+
+<body>
+  <header>
     <% include ../partials/header.ejs %>
-   </header
-   <nav>
-       <% include ../partials/nav.ejs %>
+  </header <nav>
+  <% include ../partials/nav.ejs %>
 
-   </nav>
-   <div class="container">
-     <div class="changepage">
-       <ul class="pagination">
-         <li class="page-item" id = 'previous-page'><a class="page-link" href="#">Previous</a></li>
-       </ul>
-     </div>
-
+  </nav>
+  <div class="container">
+    <div class="changepage">
+      <ul class="pagination">
+        <li class="page-item" id='previous-page'><a class="page-link" href="#">Previous</a></li>
+      </ul>
+    </div>
 
 
-   <div id='eventContainer' class="container">
 
-        <% for (let i = 0; i < events.length; i++) {%>
-            <div class="event">
-          <div class="eventImage">
-            <img class="img-fluid" src="<%=events[i].eventPhoto%>" alt="">
-          </div>
-          <div class="eventContent">
-            <a href="/pghfree/events/<%=events[i].id%>"><h3><%=events[i].title%></h3></a>
-            <h4><%=events[i].dateAndTime%></h4>
-            <h6><%=events[i].location%></h6>
+    <div id='eventContainer' class="container">
 
-            </div>
-          </div>
+      <% for (let i = 0; i < events.length; i++) {%>
+      <div class="event">
+        <div class="eventImage">
+          <img class="img-fluid" src="<%=events[i].eventPhoto%>" alt="">
+        </div>
+        <div class="eventContent">
+          <a href="/pghfree/events/<%=events[i].id%>">
+            <h3>
+              <%=events[i].title%>
+            </h3>
+          </a>
+          <h4>
+            <%=events[i].dateAndTime%>
+          </h4>
+          <h6>
+            <%=events[i].location%>
+          </h6>
+
+        </div>
+      </div>
 
 
-       <% }%>
-       <div class="container changepage">
-         <ul class="pagination">
-           <li class="page-item" id = 'previous-page'><a class="page-link" href="#">Previous</a></li>
-         </ul>
-       </div>
+      <% }%>
+      <div class="container changepage">
+        <ul class="pagination">
+          <li class="page-item" id='previous-page'><a class="page-link" href="#">Previous</a></li>
+        </ul>
+      </div>
 
 
     </div>
-</div>
-  <footer> <% include ../partials/footer.ejs %></footer>
-  </body>
+  </div>
+  <footer>
+    <% include ../partials/footer.ejs %>
+  </footer>
+</body>
 
 </html>
